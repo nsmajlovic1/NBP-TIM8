@@ -121,5 +121,13 @@ public class SwaggerConfiguration {
                 .pathsToMatch("/api/reports/storage/**")
                 .build();
     }
+    @Bean
+    public GroupedOpenApi imageApi(){
+        return GroupedOpenApi.builder()
+                .group("image-api")
+                .packagesToScan("com.formula.parts.tracker.rest")
+                .pathsToMatch("/api/image/**")
+                .build();
+    }
 
 }
